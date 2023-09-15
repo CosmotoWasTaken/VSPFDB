@@ -1,35 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/LinkCard.astro';
+import Layout from "../layouts/Layout.astro";
+import ProfileCard from "../components/ProfileCard.astro";
+import Card from "../components/Card.astro"
 ---
 
-<Layout title="VSPFDB | Home">
+<Layout title="VSPFDB | About">
 	<main>
-		<h1><span class="text-gradient">Project VSPFDB</span></h1>
+		<h1><span class="text-gradient">About Us!</span></h1>
 		<p class="instructions">
-			Welcome to Project VSPFDB! A project started by the owners of <a href="https://www.youtube.com/@CosmotoVocaloidAddicts" target="_blank">Cosmoto</a>!
+			We are Cosmoto! We wanted to create an easier way to find project
+			files for Vocal Synth cover making!
 		</p>
 		<ul role="list" class="link-card-grid">
-			<Card
-				href='https://vsprojectdb.notion.site/0340add298df4bdf8eb903be139b6a23?v=725afca7a23145209222a5c39f0e825f&pvs=4',
-				title='Database (Notion)',
-				body='Search the database to find the project file you need!',
-				target='_blank'
+			<ProfileCard
+				name="Polar (Any Pronouns)"
+				bio="Cover artist who uses mostly Kasane Teto.<br><br>I started this project to make it a bit easier for other people to find project files and make their own covers!"
+				image="../src/assets/polar_pfp.png"
 			/>
-			<Card
-				href='/VSPFDB/about',
-				title='About us!',
-				body='Read about us!'
-			/>
-			<Card
-				href='/VSPFDB/guide'
-				title='Guide'
-				body='Learn how to properly use the Notion database!'
-			/>
-			<Card
-				href='/VSPFDB/contribute'
-				title='Contribute'
-				body='Contribute to this project!'
+			<ProfileCard
+				name="MudaiP (He/Him)"
+				bio="Cover artist who uses CeVIO AI. Currently owns 3 voicebanks.<br><br>Helps create entires!"
 			/>
 		</ul>
 	</main>
@@ -71,7 +61,10 @@ import Card from '../components/LinkCard.astro';
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
 		padding: 1.5rem;
 		border-radius: 8px;
 	}
@@ -86,13 +79,9 @@ import Card from '../components/LinkCard.astro';
 	.instructions strong {
 		color: rgb(var(--accent-light));
 	}
-	.instructions a {
-		color: pink;
-		font-weight: bold;
-	}
 	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		display: flex;
+		flex-direction: column;
 		gap: 2rem;
 		padding: 0;
 	}

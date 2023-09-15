@@ -1,20 +1,20 @@
 ---
 interface Props {
-    title?: String;
-    content?: String;
-    image?: string;
+    name: String;
+    bio: String;
+    image?: String;
 }
 
-let { title, content, image } = Astro.props;
+let { name, bio, image="../src/assets/default_pfp.png" } = Astro.props;
 ---
 
 <li class="card">
     <div>
         <h2>
-            {title}
+            {name}
         </h2>
         <p>
-            <Fragment set:html={content}/>
+            <Fragment set:html={bio}/>
         </p>
     </div>
     <div class="image-div">

@@ -12,12 +12,44 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/VSPFDB/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<ul class="nav-bar"> 
+			<li>
+				<a href="/VSPFDB">
+					Home
+				</a>
+			</li>
+			<li>
+				<a href="https://vsprojectdb.notion.site/0340add298df4bdf8eb903be139b6a23?v=725afca7a23145209222a5c39f0e825f&pvs=4" target="_blank">
+					Database
+				</a>
+			</li>
+			<li>
+				<a href="/VSPFDB/guide">
+					Guide
+				</a>
+			</li>
+			<li>
+				<a href="/VSPFDB/contribute">
+					Contribute
+				</a>
+			</li>
+			<li>
+				<a href="/VSPFDB/about">
+					About Us!
+				</a>
+			</li>
+		</ul>
+
 		<slot />
+
+		<div class="footer"> 
+			<p>Cosmoto</p>
+		</div>
 	</body>
 </html>
 <style is:global>
@@ -26,10 +58,10 @@ const { title } = Astro.props;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
-			45deg,
+			0deg,
 			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
+			rgb(var(--accent-light)) 80%,
+			white 30%
 		);
 	}
 	html {
@@ -47,5 +79,43 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	.nav-bar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: black;
+	}
+	.nav-bar li {
+		float: left;
+	}
+	.nav-bar a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	.nav-bar a:hover {
+ 		background-color: #111;
+	}
+	.footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		background-color: black;
+		color: white;
+		transition: opacity .25s ease-out;
+	}
+	.footer:hover {
+		opacity: .5;
+		transition: opacity .25s ease-in;
 	}
 </style>
