@@ -2,10 +2,10 @@
 interface Props {
     name: String;
     bio: String;
-    image?: String;
+    image?: string;
 }
 
-let { name, bio, image="../src/assets/default_pfp.png" } = Astro.props;
+let { name, bio, image="./src/assets/default_pfp.png" } = Astro.props;
 ---
 
 <li class="card">
