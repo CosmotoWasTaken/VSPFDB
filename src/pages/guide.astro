@@ -1,27 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProfileCard from "../components/ProfileCard.astro";
-import Card from "../components/Card.astro"
 ---
 
-<Layout title="VSPFDB | About">
+<Layout title="VSPFDB | Guide">
 	<main>
-		<h1><span class="text-gradient">About Us!</span></h1>
-		<p class="instructions">
-			We are Cosmoto! We wanted to create an easier way to find project
-			files for Vocal Synth cover making!
+		<h1><span class="text-gradient">Quick Guide!</span></h1>
+		<p class="instructions">A quick guide on how to navigate the Notion!</p>
+		<h2>How to search and filter through files</h2>
+		<p>
+			You can search for specific songs by pressing the magnifying glass
+			at the top right of the page!
 		</p>
-		<ul role="list" class="link-card-grid">
-			<ProfileCard
-				name="Polar (Any Pronouns)"
-				bio="Cover artist who uses mostly Kasane Teto.<br><br>I started this project to make it a bit easier for other people to find project files and make their own covers!"
-				image="../src/assets/polar_pfp.png"
-			/>
-			<ProfileCard
-				name="MudaiP (He/Him)"
-				bio="Cover artist who uses CeVIO AI. Currently owns 3 voicebanks.<br><br>Helps create entires!"
-			/>
-		</ul>
+		<p>
+			You can filter use filters to get exactly what you want! For
+			example, you can use a filter to only get usts! It will only show
+			you distributions that include ust files!
+		</p>
 	</main>
 </Layout>
 

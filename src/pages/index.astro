@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Card from '../components/LinkCard.astro';
 ---
 
 <Layout title="VSPFDB | Home">
@@ -20,6 +20,16 @@ import Card from '../components/Card.astro';
 				href='/VSPFDB/about',
 				title='About us!',
 				body='Read about us!'
+			/>
+			<Card
+				href='/VSPFDB/guide'
+				title='Guide'
+				body='Learn how to properly use the Notion database!'
+			/>
+			<Card
+				href='/VSPFDB/contribute'
+				title='Contribute'
+				body='Contribute to this project!'
 			/>
 		</ul>
 	</main>
