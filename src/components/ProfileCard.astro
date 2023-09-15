@@ -1,11 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+import defaultPFP from 'src/assets/default_pfp.png';
+
 interface Props {
     name: String;
     bio: String;
-    image?: string;
+    image?: ImageMetadata;
 }
 
-let { name, bio, image="./src/assets/default_pfp.png" } = Astro.props;
+const { name, bio, image=defaultPFP} = Astro.props;
 ---
 
 <li class="card">
@@ -18,7 +21,7 @@ let { name, bio, image="./src/assets/default_pfp.png" } = Astro.props;
         </p>
     </div>
     <div class="image-div">
-        <img src={image} />
+        <img src={image.src} alt='profile picture' width=250 height=250/>
     </div>
 </li>
 
