@@ -1,16 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import ProfileCard from "../components/ProfileCard.astro";
 ---
 
 <Layout title="VSPFDB | About">
 	<main>
 		<h1><span class="text-gradient">About Us!</span></h1>
 		<p class="instructions">
-			We are Cosmoto!
-            We wanted to create an easier way to find project files for Vocal Synth cover making!
+			We are Cosmoto! We wanted to create an easier way to find project
+			files for Vocal Synth cover making!
 		</p>
 		<ul role="list" class="link-card-grid">
+			<ProfileCard
+				name="Polar (Any Pronouns)"
+				bio="Cover artist who uses mostly Kasane Teto.<br><br>I started this project to make it a bit easier for other people to find project files and make their own covers!"
+				image="./public/polar_pfp.png"
+			/>
+			<ProfileCard
+				name="MudaiP (He/Him)"
+				bio="Cover artist who uses CeVIO AI. Currently owns 3 voicebanks.<br><br>Helps create entires!"
+			/>
+		</ul>
 	</main>
 </Layout>
 
@@ -50,7 +60,10 @@ import Card from '../components/Card.astro';
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
 		padding: 1.5rem;
 		border-radius: 8px;
 	}
@@ -66,8 +79,8 @@ import Card from '../components/Card.astro';
 		color: rgb(var(--accent-light));
 	}
 	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		display: flex;
+		flex-direction: column;
 		gap: 2rem;
 		padding: 0;
 	}

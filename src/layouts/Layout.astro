@@ -17,6 +17,18 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<nav> 
+			<a href="/VSPFDB"> 
+				<button>
+					Home
+				</button>
+			</a>
+			<a href="/VSPFDB/about"> 
+				<button>
+					About Us!
+				</button>
+			</a>
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -26,10 +38,10 @@ const { title } = Astro.props;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
-			45deg,
+			0deg,
 			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
+			rgb(var(--accent-light)) 80%,
+			white 30%
 		);
 	}
 	html {

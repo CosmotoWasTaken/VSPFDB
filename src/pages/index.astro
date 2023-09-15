@@ -13,12 +13,13 @@ import Card from '../components/Card.astro';
 			<Card
 				href='https://vsprojectdb.notion.site/0340add298df4bdf8eb903be139b6a23?v=725afca7a23145209222a5c39f0e825f&pvs=4',
 				title='Database (Notion)',
-				body='Search the database to find the project file you need!'
+				body='Search the database to find the project file you need!',
+				target='_blank'
 			/>
 			<Card
 				href='/VSPFDB/about',
 				title='About us!',
-				body='Found out who we are exactly and what is our goal!'
+				body='Read about us!'
 			/>
 		</ul>
 	</main>
@@ -74,6 +75,10 @@ import Card from '../components/Card.astro';
 	}
 	.instructions strong {
 		color: rgb(var(--accent-light));
+	}
+	.instructions a {
+		color: pink;
+		font-weight: bold;
 	}
 	.link-card-grid {
 		display: grid;
